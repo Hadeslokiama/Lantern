@@ -6,9 +6,9 @@
 </section>
 <section class="table-section container">
     <div class="table-heading"><h2>All users</h2><span class="count-badge"><?= count($users) ?> users</span></div>
-    <div class="table-wrap"><table><thead><tr><th>User</th><th>Role</th><th>Status</th></tr></thead><tbody>
+    <div class="table-wrap"><table><thead><tr><th>User</th><th>Username</th><th>Created</th></tr></thead><tbody>
     <?php foreach ($users as $user): ?>
-        <tr><td><strong><?= esc($user['name']) ?></strong><small><?= esc($user['email']) ?></small></td><td><?= esc($user['role']) ?></td><td><span class="pill pill-<?= strtolower($user['status']) ?>"><?= esc($user['status']) ?></span></td></tr>
+        <tr><td><strong><?= esc($user['full_name']) ?></strong></td><td><?= esc($user['username']) ?></td><td><?= esc($user['created_at']) ?></td></tr>
     <?php endforeach; ?>
     </tbody></table></div>
 </section>
